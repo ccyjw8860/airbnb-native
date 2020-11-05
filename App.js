@@ -25,7 +25,7 @@ const cacheFonts = fonts => fonts.map(font => Font.loadAsync(font))
 export default function App() {
   const [isReady, setIsReady] = useState(false);
   const handleFinish = () => setIsReady(true);
-  const loadAssets = async () => {
+  const loadAssets = () => {
     const images = [
       require("./assets/main_bg1.png"),
       "http://logok.org/wp-content/uploads/2014/07/airbnb-logo-belo-219x286.png"
@@ -46,7 +46,7 @@ export default function App() {
     <AppLoading
       onError={console.error}
       onFinish={handleFinish}
-      startAsync={loadAssets}
+      startAsync={await loadAssets}
     />
   );
 }
