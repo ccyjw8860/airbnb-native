@@ -46,7 +46,7 @@ export default function App() {
     <AppLoading
       onError={console.error}
       onFinish={handleFinish}
-      startAsync={await loadAssets}
+      startAsync={loadAssets}
     />
   );
 }
