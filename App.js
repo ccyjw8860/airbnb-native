@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 import store, { persistor } from './redux/store'
 import { PersistGate } from "redux-persist/integration/react";
 
-
 const cacheImages = images =>{
   return images.map(image => {
     if (typeof image === "string") {
@@ -25,7 +24,7 @@ const cacheFonts = fonts => fonts.map(font => Font.loadAsync(font))
 export default function App() {
   const [isReady, setIsReady] = useState(false);
   const handleFinish = () => setIsReady(true);
-  const loadAssets = async () => {
+  const loadAssets = () => {
     const images = [
       require("./assets/main_bg1.png"),
       "http://logok.org/wp-content/uploads/2014/07/airbnb-logo-belo-219x286.png"
