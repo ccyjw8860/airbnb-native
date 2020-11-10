@@ -27,7 +27,6 @@ export default () => {
                         alignItems:'center',
                         flex:1
                     }
-    
                 }}
                 screenOptions={{}}/>
             <Auth.Screen name='SignIn' component={SignIn} options={{title:'Sign In'}}/>
