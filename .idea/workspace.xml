@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fbc6e7f6-e495-432c-937a-c94362fcad4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/BackBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Auth/BackBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/Btn.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Auth/Btn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Gate.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Gate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/usersSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/usersSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Auth/SignIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Auth/SignUp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/roomsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/roomsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Auth/SignUp/SignUpContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Auth/SignUp/SignUpContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Main/Explore/ExploreContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Main/Explore/ExploreContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Main/Explore/ExplorePresenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Main/Explore/ExplorePresenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Main/Explore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Main/Explore/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +50,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2000" y="165" width="1720" height="840" key="AVDManager" timestamp="1604986125394">
+    <state x="2000" y="165" width="1720" height="840" key="AVDManager" timestamp="1604998146711">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2020" y="100" width="1720" height="840" key="AVDManager/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604631806197" />
-    <state x="2000" y="165" width="1720" height="840" key="AVDManager/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1604986125394" />
+    <state x="2000" y="165" width="1720" height="840" key="AVDManager/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1604998146711" />
   </component>
 </project>

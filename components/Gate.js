@@ -13,8 +13,8 @@ export default ()=> {
 return (
     <NavigationContainer>
         {isLoggedIn ? 
-        // <Main/>  
-        <Text>HELLO?</Text>
+        <Main/>  
+        // <Text>HELLO?</Text>
         : 
         <Auth/> }
     </NavigationContainer>

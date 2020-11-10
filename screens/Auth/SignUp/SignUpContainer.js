@@ -38,6 +38,7 @@ export default ({navigation:{navigate}}) => {
                 navigate('SignIn', {email, password});
             }
         } catch(e){
+            console.log(e)
             alert('The email is already taken')
         } finally{
             setLoading(false);

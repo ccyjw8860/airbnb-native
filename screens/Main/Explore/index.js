@@ -11,8 +11,7 @@ function mapDispatchToProps(dispatch){
 }
 
 function mapStateToProps(state){
-    console.log(state.roomsReducer);
-    return state.roomsReducer;
+    return state.roomsReducer.explore;
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExploreContainer);
