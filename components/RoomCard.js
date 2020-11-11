@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import Pt from 'prop-types'
-import { Dimensions } from 'react-native';
+import { Dimensions, Text } from 'react-native';
+import Swiper from 'react-native-swiper'
 
 const {width, height} =  Dimensions.get('screen')
 
@@ -44,22 +45,36 @@ const SuperHostText = styled.Text`
 `
 
 const PhotosContainer = styled.View`
-    background-color:red;
     height: ${height / 3}px;
+    overflow:hidden;
     width:100%;
     margin-bottom:10px;
 `;
 
-const DefaultImg = styled.Image``;
+const DefaultImg = styled.Image`
+    width:100%;
+    height:100%;
+`;
+
+const SlideImg = styled.Image`
+    width:100%;
+    height:100%;
+`
 
 const RoomCard = ({id, isFav, isSuperHost, photos, name, price}) => {
-    console.log(id, photos)
     return(
         <Container>
-            {/* <PhotosContainer>
-                {photos.length===0 ? 
-                    <DefaultImg source={require('../assets/default_house.jpg')}/> : null}
-            </PhotosContainer> */}
+            <PhotosContainer>
+                {photos.length === 0 ? 
+                    <DefaultImg resizeMethode='repeat' source={require('../assets/default_house.jpg')}/> 
+                    : <Swiper paginationStyle={{marginBottom:-15}} activeDotColor={'white'} dotColor={"rgba(200,200,200,0.5)"}>
+                        {photos.map(photo => {
+                            return(
+                                <SlideImg key = {photo.id} esizeMethode='repeat' source={{uri: photo.file}}/>
+                            )
+                        })}
+                     </Swiper>}
+            </PhotosContainer>
             {isSuperHost ? <SuperHost><SuperHostText>SuperHost</SuperHostText></SuperHost> : null}
             <Name>{name}</Name>
             <PriceContainer>

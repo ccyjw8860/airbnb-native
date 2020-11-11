@@ -14,28 +14,39 @@ const roomSlice = createSlice({
         setExploreRooms(state, action){
             const {explore:{rooms}} = state;
             const {payload} = action;
-            payload.rooms.forEach(payloadRoom=>{
-                const existingRoom = rooms.find(savedRoom => savedRoom.id===payloadRoom.id);
-                if(!existingRoom){
-                    rooms.push(payloadRoom);
-                }
-            })
-            state.explore.page = action.payload.page;
+
+            if(payload.page===1){
+                state.explore.rooms = payload.rooms;
+                state.explore.page = 1;
+            }else{
+                payload.rooms.forEach(payloadRoom=>{
+                    const existingRoom = rooms.find(savedRoom => savedRoom.id===payloadRoom.id);
+                    if(!existingRoom){
+                        rooms.push(payloadRoom);
+                        // [...state.explore.rooms, payloadRoom]
+                    }
+                })
+
+                state.explore.page = payload.page;
+            }
+        },
+        increasePage(state,action){
+            state.explore.page += 1;
         }
     }
 })
 
-export const {setExploreRooms} = roomSlice.actions;
+export const {setExploreRooms, increasePage} = roomSlice.actions;
 
-export const getRooms = () => async dispatch => {
+export const getRooms = (page) => async dispatch => {
     try{
-        const {data:{results}} = await api.rooms();
+        const {data:{results}} = await api.rooms(page);
         dispatch(setExploreRooms({
             rooms:results,
-            page: 1
+            page
         }))
     }catch(e){
-        console.log(e)
+        console.warn(e)
     }
 }
 
