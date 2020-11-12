@@ -3,6 +3,10 @@ import styled from 'styled-components/native';
 import Pt from 'prop-types'
 import { Dimensions, Text } from 'react-native';
 import Swiper from 'react-native-swiper'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import {Ionicons} from '@expo/vector-icons'
+import utils from '../utils';
+
 
 const {width, height} =  Dimensions.get('screen')
 
@@ -10,6 +14,7 @@ const Container = styled.View`
     width:100%;
     margin-bottom:50px;
     align-items:flex-start;
+    position:relative;
 
 `
 const Name = styled.Text`
@@ -61,9 +66,31 @@ const SlideImg = styled.Image`
     height:100%;
 `
 
+const FavBtn = styled.View`
+    background-color:white;
+    width: 50px;
+    height: 50px;
+    justify-content:center;
+    align-items:center;
+    border-radius:25px;
+
+`
+
+const TOpacity = styled.TouchableOpacity`
+    position: absolute;
+    z-index:10;
+    right:10px;
+    top:10px;
+`
+
 const RoomCard = ({id, isFav, isSuperHost, photos, name, price}) => {
     return(
         <Container>
+                <TOpacity >
+                    <FavBtn>
+                        <Ionicons size={24} name={utils.isAndroid() ? 'md-heart-empty' : 'ios-heart-empty'}/>
+                    </FavBtn>
+                </TOpacity>
             <PhotosContainer>
                 {photos.length === 0 ? 
                     <DefaultImg resizeMethode='repeat' source={require('../assets/default_house.jpg')}/> 

@@ -12,24 +12,15 @@ const roomSlice = createSlice({
     },
     reducers:{
         setExploreRooms(state, action){
-            const {explore:{rooms}} = state;
-            const {payload} = action;
-
-            if(payload.page===1){
+            const { payload } = action;
+            if (payload.page === 1) {
                 state.explore.rooms = payload.rooms;
                 state.explore.page = 1;
-            }else{
-                payload.rooms.forEach(payloadRoom=>{
-                    const existingRoom = rooms.find(savedRoom => savedRoom.id===payloadRoom.id);
-                    if(!existingRoom){
-                        rooms.push(payloadRoom);
-                        // [...state.explore.rooms, payloadRoom]
-                    }
-                })
-
-                state.explore.page = payload.page;
+              } else {
+                state.explore.rooms = [...state.explore.rooms, ...payload.rooms]
             }
         },
+
         increasePage(state,action){
             state.explore.page += 1;
         }
