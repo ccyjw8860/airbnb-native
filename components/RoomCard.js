@@ -6,6 +6,8 @@ import Swiper from 'react-native-swiper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Ionicons} from '@expo/vector-icons'
 import utils from '../utils';
+import { toggleFavs } from '../redux/usersSlice';
+import {useDispatch} from 'react-redux';
 
 
 const {width, height} =  Dimensions.get('screen')
@@ -84,9 +86,10 @@ const TOpacity = styled.TouchableOpacity`
 `
 
 const RoomCard = ({id, isFav, isSuperHost, photos, name, price}) => {
+    const dispatch = useDispatch();
     return(
         <Container>
-                <TOpacity >
+                <TOpacity onPress={()=>dispatch(toggleFavs(id))}>
                     <FavBtn>
                         <Ionicons size={24} name={utils.isAndroid() ? 'md-heart-empty' : 'ios-heart-empty'}/>
                     </FavBtn>

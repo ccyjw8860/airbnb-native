@@ -23,11 +23,16 @@ const roomSlice = createSlice({
 
         increasePage(state,action){
             state.explore.page += 1;
+        },
+
+        setFavs(state, action){
+            console.log(action.payload);
+            state.favs = action.payload;
         }
     }
 })
 
-export const {setExploreRooms, increasePage} = roomSlice.actions;
+export const {setExploreRooms, increasePage, setFavs} = roomSlice.actions;
 
 export const getRooms = (page) => async dispatch => {
     try{
